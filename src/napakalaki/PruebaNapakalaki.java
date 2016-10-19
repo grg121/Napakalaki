@@ -155,7 +155,7 @@ public class PruebaNapakalaki {
 
         //El espía sordo
 
-        badConsequence = new BadConsequence("Te asusta en la noche. Pierdes tu"
+        badConsequence = new BadConsequence("Te asusta en la noche. Pierdes tu "
                 + "casco visible", 0, new ArrayList(Arrays.asList(TreasureKind.HELMET)),
         new ArrayList()) ;
 
@@ -198,7 +198,7 @@ public class PruebaNapakalaki {
 
         // El sopor de Dunwich
         badConsequence = new BadConsequence("El primordial bostezo contagioso. "
-                + "Pierdes el calzado visible", 0, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS)),
+                + "Pierdes el calzado visible", 0, new ArrayList(Arrays.asList(TreasureKind.SHOES)),
                 new ArrayList());
         prize = new Prize(1, 1);
         monstruos.add(new Monster("El sopor de Dunwich", 2, badConsequence, prize));
@@ -262,6 +262,46 @@ public class PruebaNapakalaki {
          }
              System.out.println();
          
+              datos =  PierdeTesoro(TreasureKind.ARMOR);
+         System.out.println("Pierdes armadura:");
+         for(Monster monstruo : datos){
+             System.out.println(monstruo.toString()) ;
+
+         }
+             System.out.println();
+         
+                           datos =  PierdeTesoro(TreasureKind.BOTHHANDS);
+         System.out.println("Pierdes dos manos:");
+         for(Monster monstruo : datos){
+             System.out.println(monstruo.toString()) ;
+
+         }
+             System.out.println();
+         
+                           datos =  PierdeTesoro(TreasureKind.HELMET);
+         System.out.println("Pierdes casco:");
+         for(Monster monstruo : datos){
+             System.out.println(monstruo.toString()) ;
+
+         }
+             System.out.println();
+         
+                           datos =  PierdeTesoro(TreasureKind.ONEHAND);
+         System.out.println("Pierdes una mano:");
+         for(Monster monstruo : datos){
+             System.out.println(monstruo.toString()) ;
+
+         }
+             System.out.println();
+                       datos =  PierdeTesoro(TreasureKind.SHOES);
+         System.out.println("Pierdes zapatos:");
+         for(Monster monstruo : datos){
+             System.out.println(monstruo.toString()) ;
+
+         }
+             System.out.println();
+         
+             
         
         
         
