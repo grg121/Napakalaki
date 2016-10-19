@@ -7,36 +7,31 @@ package napakalaki;
 
 /**
  *
- * @author pinguino
+ * @author Redondo
  */
 public class Prize {
-    
-    private int treasures ; 
-    
-    private int level ;
-    
-    public Prize(int treasures, int level){
-        
-        this.treasures = treasures ; 
-        
-        this.level = level ; 
-        
-    }
-    
-    public int getTreasures(){
-        return this.treasures ;
-    }
-    
-    public int getLevel(){
-        return this.level ;
+    private int treasure;
+    private int level; 
+
+    public Prize(int treasure, int level) {
+        this.treasure = treasure;
+        this.level = level;
     }
 
+    public int getTreasure() {
+        return treasure;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    
     @Override
     public String toString() {
-        return "Prize{" + "treasures=" + treasures + ", level=" + level + '}';
+        return "Prize{" + "treasure=" + treasure + ", level=" + level + '}';
     }
     
-    
-    
+       
     
 }

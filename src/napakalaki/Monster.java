@@ -7,42 +7,53 @@ package napakalaki;
 
 /**
  *
- * @author pinguino
+ * @author Redondo
  */
 public class Monster {
     
-    private String name ;
-    private int combatLevel ; 
-    private Prize prize ; 
-    private BadConsequence badConsequence ; 
-
-    public Monster(String name, int combatLevel, BadConsequence badConsequence, Prize prize) {
+    private String name;
+    private int combatLevel;
+    
+    private Prize premio;
+    private BadConsequence rol;
+    
+    /**
+     *
+     * @param name
+     * @param level
+     * @param prize
+     * @param bc
+     */
+    public Monster(String name, int level, BadConsequence bc, Prize prize) {
         this.name = name;
-        this.combatLevel = combatLevel;
-        this.prize = prize;
-        this.badConsequence = badConsequence;
+        this.combatLevel = level; 
+        premio = prize;
+        rol = bc;
     }
 
-    public String getName() {
+    public String getString() {
         return name;
     }
 
     public int getCombatLevel() {
         return combatLevel;
     }
-
-    public Prize getPrize() {
-        return prize;
+     
+    public Prize getPremio() {
+        return premio;
     }
 
-    public BadConsequence getBadConsequence() {
-        return badConsequence;
+    public BadConsequence getRol() {
+        return rol;
     }
 
+    
     @Override
     public String toString() {
-        return "Monster{" + "name=" + name + ", combatLevel=" + combatLevel + ", prize=" + prize + ", badConsequence=" + badConsequence + '}';
+        return "Monster{" + "name=" + name + ", combatLevel=" + combatLevel + ", premio=" + premio + ", rol=" + rol + '}';
     }
+
+   
     
     
     

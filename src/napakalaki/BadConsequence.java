@@ -9,20 +9,20 @@ import java.util.ArrayList;
 
 /**
  *
- * @author pinguino
+ * @author Redondo
  */
 public class BadConsequence {
     
-    private String text ; 
-    private int levels ; 
-    private int nVisibeTreasures ; 
-    private int nHiddenTreasures ; 
-    private boolean death ; 
+    private String text;
+    private int levels;
+    private int nVisibleTreasures;
+    private int nHiddenTreasures;
+    private boolean death;
 
-    public BadConsequence(String text, int levels, int nVisibeTreasures, int nHiddenTreasures) {
+    public BadConsequence(String text, int levels, int nVisibleTreasures, int nHiddenTreasures) {
         this.text = text;
         this.levels = levels;
-        this.nVisibeTreasures = nVisibeTreasures;
+        this.nVisibleTreasures = nVisibleTreasures;
         this.nHiddenTreasures = nHiddenTreasures;
     }
 
@@ -31,18 +31,18 @@ public class BadConsequence {
         this.death = death;
     }
     
-    public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible, ArrayList<TreasureKind> tHidden){
-        this.text = text;
-        this.levels = levels ; 
-        specificHiddenTreasures = tHidden ; 
-        specificVisibleTreasures = tVisible ; 
-        
-    }
-    
-    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList() ; 
-    
+    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
 
+    
+    BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible, ArrayList<TreasureKind> tHidden) {
+            this.text = text;
+            this.levels = levels;
+            specificVisibleTreasures = tVisible;
+            specificHiddenTreasures = tHidden;
+    }
+    
+    
     public String getText() {
         return text;
     }
@@ -51,33 +51,53 @@ public class BadConsequence {
         return levels;
     }
 
-    public int getnVisibeTreasures() {
-        return nVisibeTreasures;
+    @Override
+    public String toString() {
+        return "BadConsequence{" + "text=" + text + ", levels=" + levels + ", nVisibleTreasures=" + nVisibleTreasures + ", nHiddenTreasures=" + nHiddenTreasures + ", death=" + death + ", specificHiddenTreasures=" + specificHiddenTreasures + ", specificVisibleTreasures=" + specificVisibleTreasures + '}';
+    }
+
+    public int getnVisibleTreasures() {
+        return nVisibleTreasures;
+    }
+
+    public void setnVisibleTreasures(int nVisibleTreasures) {
+        this.nVisibleTreasures = nVisibleTreasures;
     }
 
     public int getnHiddenTreasures() {
         return nHiddenTreasures;
     }
 
+    public void setnHiddenTreasures(int nHiddenTreasures) {
+        this.nHiddenTreasures = nHiddenTreasures;
+    }
+
     public boolean isDeath() {
         return death;
+    }
+
+    public void setDeath(boolean death) {
+        this.death = death;
     }
 
     public ArrayList<TreasureKind> getSpecificHiddenTreasures() {
         return specificHiddenTreasures;
     }
 
+    public void setSpecificHiddenTreasures(ArrayList<TreasureKind> specificHiddenTreasures) {
+        this.specificHiddenTreasures = specificHiddenTreasures;
+    }
+
     public ArrayList<TreasureKind> getSpecificVisibleTreasures() {
         return specificVisibleTreasures;
     }
 
-    @Override
-    public String toString() {
-        return "BadConsequence{" + "text=" + text + ", levels=" + levels + ", nVisibeTreasures=" + nVisibeTreasures + ", nHiddenTreasures=" + nHiddenTreasures + ", death=" + death + ", specificHiddenTreasures=" + specificHiddenTreasures + ", specificVisibleTreasures=" + specificVisibleTreasures + '}';
+    public void setSpecificVisibleTreasures(ArrayList<TreasureKind> specificVisibleTreasures) {
+        this.specificVisibleTreasures = specificVisibleTreasures;
     }
-
-   
     
     
     
+       
+     
 }
